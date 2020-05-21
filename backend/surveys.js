@@ -3,7 +3,7 @@ var AWS = require("aws-sdk");
 AWS.config.update({region: 'us-east-1'});
 
 // Load the UUID library
-const uuidv4 = require('uuid/v4');
+const { v4: uuidv4 } = require('uuid');
 
 // Create the DynamoDB Document Client
 var dynamodb = new AWS.DynamoDB.DocumentClient();
